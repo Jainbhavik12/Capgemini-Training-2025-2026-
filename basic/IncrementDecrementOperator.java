@@ -1,0 +1,23 @@
+package basic;
+
+public class IncrementDecrementOperator {
+
+	public static void main(String[] args) {
+		
+		int a = 5;
+		int b = a++ + ++a + a;
+		int c = --a + ++b + b--;
+		int d = a + b + c + a--;
+		
+		System.out.println(a);
+		System.out.println(b);
+
+		System.out.println(c);
+		System.out.println(d);
+
+
+		
+
+	}
+
+}
