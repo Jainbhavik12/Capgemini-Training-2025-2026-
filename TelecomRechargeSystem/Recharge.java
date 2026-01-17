@@ -1,4 +1,4 @@
-package TelecomRechargeSystem;
+package telecomRechargeSystem;
 
 public class Recharge {
 	private int amount;
