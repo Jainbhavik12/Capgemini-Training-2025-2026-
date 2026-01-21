@@ -11,7 +11,7 @@ public class Book implements Comparable{
 	public int compareTo(Object o) {
 		// TODO Auto-generated method stub
 		Book b = (Book)o;
-		return b.price - this.price;
+		return this.price-b.price;
 	}
 	@Override
 	public String toString() {
