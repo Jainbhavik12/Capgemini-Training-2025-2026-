@@ -3,20 +3,26 @@ package EmployeeManagementSystem;
 import java.util.Scanner;
 
 public class EmployeeManagementSystem {
+	
 	Scanner sc = new Scanner(System.in);
+	
 	Employee[] employees = new Employee[20];
 	int count = 0;
 	
 	public void addEmployee() {
 		
 		if(count >= 20) System.out.println("No vacancy available");
+		
 		System.out.print("Enter Employee ID: ");
 		int id = sc.nextInt();
+		
 		sc.nextLine();
 		System.out.print("Enter Name: ");
 		String name = sc.nextLine();
+		
 		System.out.print("Enter Department: ");
 		String department = sc.nextLine();
+		
 		System.out.print("Enter Salary: ");
 		double salary = sc.nextDouble();
 		
@@ -34,7 +40,7 @@ public class EmployeeManagementSystem {
 	public void updateEmployee() {
 	    System.out.print("Enter Employee ID to Update: ");
 	    int idToUpdate = sc.nextInt();
-	    sc.nextLine(); // consume newline
+	    sc.nextLine();
 
 	    boolean found = false;
 
@@ -66,11 +72,17 @@ public class EmployeeManagementSystem {
 	        System.out.println("Employee ID Not found");
 	    }
 	}
+	
+	
 	public void deleteEmployee() {
+		
 		System.out.print("Enter Employee ID to Delete: ");
 	    int idToDelete = sc.nextInt();
+	    
 	    int deleteIndex=0;
 	    boolean idFound = false;
+	    
+	    
 	    for(int i=0; i<count; i++) {
 	    		if(employees[i].getId() == idToDelete) {
 	    			deleteIndex = i;
@@ -88,10 +100,14 @@ public class EmployeeManagementSystem {
 	    count--;
 	    System.out.println("Employee deleted successfully");
 	}
+	
+	
 	public void searchEmployee() {
 		System.out.print("Enter Employee ID to Search: ");
 	    int idToSearch = sc.nextInt();
+	    
 	    boolean isFound=false;
+	    
 	    for(Employee e: employees) {
 	    		if(e.getId() == idToSearch) {
 	    			System.out.println("Employee Found");
@@ -106,7 +122,8 @@ public class EmployeeManagementSystem {
 	}
 	public void countByDepartment() {
 	    System.out.print("Enter Department: ");
-	    sc.nextLine(); // consume leftover newline if previous input was nextInt()
+	    sc.nextLine(); 
+	    
 	    String dept = sc.nextLine();
 
 	    int countByDept = 0;
